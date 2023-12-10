@@ -50,4 +50,5 @@ Project_Heathly
 ├─ log
 ├─ main.py
 └─ README.md
+└─ .env
 ```
