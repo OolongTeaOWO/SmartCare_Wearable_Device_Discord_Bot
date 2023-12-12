@@ -11,9 +11,6 @@ sys.path.append("/path/to/Project_Heathly")
 from ImportFunction import Address_Locator as Address
 
 data = {}
-taipei_timezone = timezone(timedelta(hours=8)) #獲得台北時區
-current_time = datetime.now(taipei_timezone) #將當前時間轉換成台北時區
-formatted_date_time = current_time.strftime("%Y-%m-%d %H:%M:%S") #格式化日期的字串
 
 class GetDtata(Cog_Extension):
                 
@@ -31,6 +28,9 @@ class GetDtata(Cog_Extension):
                     title="健康監測資料反饋",
                     color=discord.Color.blue())
                 address_dict = {"latitude":0, "longtitude":0}
+                taipei_timezone = timezone(timedelta(hours=8)) #獲得台北時區
+                current_time = datetime.now(taipei_timezone) #將當前時間轉換成台北時區
+                formatted_date_time = current_time.strftime("%Y-%m-%d %H:%M:%S") #格式化日期的字串
                 for key, value in data.items():
                     if key in address_dict:
                         address_dict[key] = value
