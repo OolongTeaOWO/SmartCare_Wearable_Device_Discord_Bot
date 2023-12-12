@@ -20,11 +20,13 @@ async def on_ready():
 async def load_all_extensions():
     for filename in os.listdir(os.path.join(os.path.dirname(__file__), 'cogs')):
         if filename.endswith('.py'):
-            try:
-                await bot.load_extension(f'cogs.{filename[:-3]}')
-                logger.info(F'[初始化] 載入 Extension: {filename[:-3]}')
-            except Exception as exc:
-                logger.error(F'[初始化] 載入 Extension 失敗: {exc}')
+            await bot.load_extension(f'cogs.{filename[:-3]}')
+            logger.info(F'[初始化] 載入 Extension: {filename[:-3]}')
+            # try:
+            #     await bot.load_extension(f'cogs.{filename[:-3]}')
+            #     logger.info(F'[初始化] 載入 Extension: {filename[:-3]}')
+            # except Exception as exc:
+            #     logger.error(F'[初始化] 載入 Extension 失敗: {exc}')
     logger.info('[初始化] Extension 載入完畢')
 
 @bot.command(name='sync', brief='Bot Slash Command Sync', description='Bot Slash Command Sync')
