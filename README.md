@@ -4,6 +4,8 @@
 
 
 ## 簡介
+基於智慧照護穿戴裝置功能需求的DISCORD BOT  
+用於取代網頁及APP之功能
 
 ## 套件使用
 - discord.py ```撰寫discord bot的核心套件```
@@ -16,13 +18,22 @@
 - sys ```用於將項目的路徑添加到 Python 解釋器的模組搜索路徑中，以便能够導入項目中的模組```
 - googletrans ```使用google翻譯 api製作的套件(和google無直接關聯)```
 
-## 功能介紹
+## 自訂module
+- Address_Locator >可以透過座標查詢地址並回傳
+- TextInputEdit >改寫discord.ui的TextInput方法
 
->指令相關功能
+## 功能介紹
+### 指令相關功能
+>文字指令
 - sync ```更新指令如果有新增其他功能```
 - status ```查詢機器人當前已載入的擴充```
 - ping ```查詢機器人的延遲時間```  
 
+---
+>斜線指令
+- thread_create ```選擇特定貼文頻道新增貼文並上傳預設訊息```
+- forum_create ```創建一個預設名稱的貼文頻道```
+- modal_call ```呼叫表單填寫並在送出後返回資料```
 >非指令類型
 - 透過Arduino傳遞webhook訊息並在bot端接收並產生log訊息
 
@@ -40,8 +51,10 @@
 Project_Heathly
 ├─ .gitignore
 ├─ cogs
+│  ├─ CreateForum.py
+│  ├─ CreateThread.py
 │  ├─ GetData.py
-│  ├─ slash_command.py
+│  ├─ ModalChek.py
 │  ├─ slash_event.py
 │  ├─ System.py
 │  └─ TestCommand.py
@@ -49,7 +62,7 @@ Project_Heathly
 │  └─ classes.py
 ├─ ImportFunction
 │  └─ Address_Locator.py
-├─ log
+│  └─ TextInputEdit.py
 ├─ main.py
 └─ README.md
 └─ .env
