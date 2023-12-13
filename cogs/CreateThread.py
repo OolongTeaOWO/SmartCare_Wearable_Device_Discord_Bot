@@ -11,7 +11,7 @@ class CreateThread(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @app_commands.command(name="建立貼文", description="測試用")
+    @app_commands.command(name="thread_create", description="測試用")
     @app_commands.describe(channel = "選擇要發布貼文的頻道")
     @app_commands.rename(channel = "頻道")
     async def forum_create(self, interaction: discord.Interaction, channel: discord.ForumChannel):
