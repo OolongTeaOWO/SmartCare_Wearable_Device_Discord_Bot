@@ -22,7 +22,6 @@ class GetDtata(Cog_Extension):
             if (msg.guild.name == 'HeathlybleData' and #檢查伺服器名稱
                 msg.channel.name == '資料接收' #檢查訊息來源頻道
                 ):
-                print(msg.content)
                 data = ast.literal_eval(msg.content)
                 embed = discord.Embed(
                     title="健康監測資料反饋",
