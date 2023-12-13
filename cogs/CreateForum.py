@@ -9,7 +9,7 @@ class CreateForum(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @app_commands.command(name="創建貼文主頻道", description="測試用")
+    @app_commands.command(name="forum_create", description="測試用")
     async def forum_create(self, interaction: discord.Interaction):
         guild = interaction.guild
         await guild.create_forum(
