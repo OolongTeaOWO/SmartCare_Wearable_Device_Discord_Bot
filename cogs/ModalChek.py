@@ -26,7 +26,7 @@ class Slash_Command(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         
-    @app_commands.command(name="表單測試", description="測試表單功能")
+    @app_commands.command(name="modal_call", description="測試表單功能")
     async def report(self, interaction: discord.Interaction):
         await interaction.response.send_modal(ModeLtemPlate())
 
