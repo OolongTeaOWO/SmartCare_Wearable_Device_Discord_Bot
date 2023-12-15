@@ -72,5 +72,5 @@ SmartCare_Wearable_Device_Discord_Bot
 ├─ main.py
 ├─ README.md
 └─ User_Data
-   └─ User_Data.json
+   └─ User_Data.json 
 ```
