@@ -49,24 +49,28 @@
 
 ---
 >檔案結構
-
 ```
-Project_Heathly
+SmartCare_Wearable_Device_Discord_Bot
 ├─ .gitignore
 ├─ cogs
+│  ├─ ButtonUI.py
 │  ├─ CreateForum.py
 │  ├─ CreateThread.py
 │  ├─ GetData.py
 │  ├─ ModalChek.py
-│  ├─ slash_event.py
 │  ├─ System.py
 │  └─ TestCommand.py
 ├─ core
 │  └─ classes.py
+├─ Device_Data
 ├─ ImportFunction
-│  └─ Address_Locator.py
+│  ├─ Address_Locator.py
+│  ├─ Datetime.py
+│  ├─ Modaltemplate.py
+│  ├─ Register.py
 │  └─ TextInputEdit.py
 ├─ main.py
-└─ README.md
-└─ .env
+├─ README.md
+└─ User_Data
+   └─ User_Data.json
 ```
