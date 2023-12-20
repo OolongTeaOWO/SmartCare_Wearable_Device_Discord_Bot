@@ -33,5 +33,4 @@ class Register(discord.ui.Modal, title="測試用表單"):
         data_list.append(data)
         with open('User_Data/User_Data.json', 'w', encoding='utf-8') as file:
             json.dump(data_list, file, indent=2, ensure_ascii=False)
-        print(data["user_name"])
         await interaction.response.send_message(embed=reponse_embed)

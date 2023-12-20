@@ -16,10 +16,13 @@ class ButtonUI(Cog_Extension):
         Register_button = Button(label="註冊使用者", style=green)
         # ------以下是callback
         async def Register_callback(interaction):
+            Register_button.disabled = True
+            messages = interaction.message
+            await messages.edit(embed=embed, view=Basic_View)
             await interaction.response.send_modal(Register())
         Register_button.callback = Register_callback
 
-        Basic_View = View(timeout=15)
+        Basic_View = View()
         Basic_View.add_item(Register_button)
 
         embed = discord.Embed(title="Heathlyble健康寶互動UI",

@@ -5,7 +5,6 @@ from core.classes import Cog_Extension
 # ------Other-------->
 import ast
 import asyncio
-import sys
 from ImportFunction import Address_Locator as Address
 from ImportFunction.Datetime import DatetimeGet
 data = {}

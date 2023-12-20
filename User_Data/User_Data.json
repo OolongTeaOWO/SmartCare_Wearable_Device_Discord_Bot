@@ -5,5 +5,28 @@
     "user_name": "夏羽綾理",
     "user_gmail": "ex.xxxx@gmail.com",
     "devices": []
+  },
+  {
+    "discord_id": 607563336774582320,
+    "discord_name": "ninotavros",
+    "user_name": "牛頭人",
+    "user_gmail": "kkii20030621@gmail.com",
+    "devices": []
+  },
+  {
+    "discord_id": 879341337571389502,
+    "discord_name": "yin_shan",
+    "user_name": "yin shan",
+    "user_gmail": "shan@gmail.com",
+    "devices": [
+      {
+        "device_name": "apple",
+        "device_id": "tt9876"
+      },
+      {
+        "device_name": "banana",
+        "device_id": "yyu9876"
+      }
+    ]
   }
 ]
