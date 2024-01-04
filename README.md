@@ -4,9 +4,10 @@
 
 
 ## 簡介
-基於智慧照護穿戴裝置功能需求的DISCORD BOT 
+基於智慧照護穿戴裝置功能需求的DISCORD BOT 及硬體裝置、APP
 
-## 套件使用
+## Discord Bot
+### 套件使用
 - discord.py ```撰寫discord bot的核心套件```
 - dotenv ```用於控制env檔案的操作```
 - loguru ```自訂終端機Log訊息```
@@ -74,13 +75,19 @@ SmartCare_Wearable_Device_Discord_Bot
    └─ User_Data.json
 ```
 
-## Arduino區塊
+## Arduino
 
-### 使用的硬體
+### 使用的硬體及模組感測器
 - Esp系列開發版
 - neo gps GPS定位感測器
+- MAX30102 血氧濃度檢測模組
 
 ### 功能列表
 - 可將感測之資料以webhook形式傳遞至discord伺服器中的頻道
 - 查詢當前位置之經緯度(暫無)
 - 感測穿戴者當前心跳及血氧濃度(暫無)
+
+  ## APP
+  ### 待開發
+  - 透過裝置ID搜尋當前裝置資料(可切換)
+  - 設定完後預設顯示當前首筆最新資料(重啟APP自動刷新及待於頁面可手動刷新)
