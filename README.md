@@ -4,8 +4,7 @@
 
 
 ## 簡介
-基於智慧照護穿戴裝置功能需求的DISCORD BOT  
-用於取代網頁及APP之功能
+基於智慧照護穿戴裝置功能需求的DISCORD BOT 
 
 ## 套件使用
 - discord.py ```撰寫discord bot的核心套件```
@@ -17,10 +16,12 @@
 - ast ```用於安全地解析 Python 字符串，提供 literal_eval 函數，避免執行潛在的不安全代碼。```
 - sys ```用於將項目的路徑添加到 Python 解釋器的模組搜索路徑中，以便能够導入項目中的模組```
 - googletrans ```使用google翻譯 api製作的套件(和google無直接關聯)```
+- pyairtable ```用於與airtable連線進行讀寫檔案及查詢的功能```
 
 ## 自訂module
 - Address_Locator >可以透過座標查詢地址並回傳
 - TextInputEdit >改寫discord.ui的TextInput方法
+- Datetime >產生當前時間戳
 
 ## 功能介紹
 ### 指令相關功能
@@ -34,28 +35,26 @@
 - thread_create ```選擇特定貼文頻道新增貼文並上傳預設訊息```
 - forum_create ```創建一個預設名稱的貼文頻道```
 - modal_call ```呼叫表單填寫並在送出後返回資料```
-
+- 新增穿戴裝置 ```根據使用者輸入的穿戴裝置id及自訂名稱新增至dc bot的紀錄中```
 ---
 >非指令類型
-- 透過Arduino傳遞webhook訊息並在bot端接收並產生log訊息
+- 透過Arduino傳遞webhook訊息給dc bot做接收並上傳至airtable同時產生log
 
 ```該功能使用到ON_MESSAGE事件監聽函式檢測```
 
-- 如果指令發生錯誤可根據發生問題找到源頭伺服器並且傳送至名為```錯誤通知區```的頻道  
-
-- 如果伺服器設定不傳送系統消息則首次被加入到伺服器後，會自動發布訊息同時讓使用者知道需要新增
+- 如果指令發生錯誤可根據發生問題找到源頭伺服器並且傳送至名為```錯誤通知區```的頻道
   
-```錯誤通知區```頻道
-
 ---
->檔案結構
+>Discord Bot檔案結構
 ```
 SmartCare_Wearable_Device_Discord_Bot
 ├─ .gitignore
 ├─ cogs
 │  ├─ ButtonUI.py
+│  ├─ ButtonUIS.py
 │  ├─ CreateForum.py
 │  ├─ CreateThread.py
+│  ├─ DeviceAdd.py
 │  ├─ GetData.py
 │  ├─ ModalChek.py
 │  ├─ System.py
@@ -74,3 +73,14 @@ SmartCare_Wearable_Device_Discord_Bot
 └─ User_Data
    └─ User_Data.json
 ```
+
+## Arduino區塊
+
+### 使用的硬體
+- Esp系列開發版
+- neo gps GPS定位感測器
+
+### 功能列表
+- 可將感測之資料以webhook形式傳遞至discord伺服器中的頻道
+- 查詢當前位置之經緯度(暫無)
+- 感測穿戴者當前心跳及血氧濃度(暫無)
